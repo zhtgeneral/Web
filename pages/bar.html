@@ -4,8 +4,51 @@
     <title>Welcome to Bar</title>
 </head>
 <body>  
-    <p class="container">Welcome to the bar</p>
-    <button class="toBarButtonClass" id="returnToHome">Return to Home</button>
+    <h1 class="c">Welcome to the bar</h1>
+    <h2 class="c">Please login to continue</h2>
+    <div class="container">
+        <div class="middle">
+            <div class="loginUIClass" id="login-form">
+                <div class="c" id="error-message"></div>
+                <form>
+                    <div class="user/pass">
+                    <li>
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" required>
+                    </li>
+                    <li>
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" required>
+                    </li>
+                    </div>
+                <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.querySelector("form").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent form submission
+
+        // Get input values
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+        var errorMessage = document.getElementById("error-message");
+
+        // Perform login validation (dummy example)
+        if (username === "admin" && password === "password") {
+            errorMessage.textContent = "Login Successful.";
+            errorMessage.style.display = "block";
+        } else {
+            // Failed login
+            errorMessage.textContent = "Invalid username or password.";
+            errorMessage.style.display = "block";
+        }
+        });
+    </script>    
+    <div class="c">
+        <button class="toBarButtonClass" id="returnToHome">Return to Home</button>
+    </div>
     <script>
         const returnToHomeButton = document.getElementById("returnToHome");
         returnToHomeButton.addEventListener("click", function() {
@@ -13,3 +56,4 @@
         });
     </script>
 </body>
+

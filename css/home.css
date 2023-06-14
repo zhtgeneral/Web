@@ -4,37 +4,44 @@
 h1 {
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-.menu-container {
-    display:flex; /* display horizontally*/
-    background-color:azure;
-    border-radius:32px;
+.container {
+    display:-webkit-flex;
+    justify-content: center;
+    background-color:aquamarine;
+    border-radius:16px;
+    padding:16px;
 }
 
 .menu {
     list-style-type:none;
-    margin:0px;
-    padding:6px;
-    display:flex; /* display child items horizontally*/
+    display:-webkit-flex; /* display child items horizontally*/
 }
 
 .menu li {
-    margin-right: 10px;
+    margin-left:16px;
+    margin-right:16px;
+    background-color:beige;
+    padding-left:32px;
+    padding-right:32px;
+    padding-top:16px;
+    padding-bottom:16px;
+    border-radius:16px;
 }
-
-.menu a {
+.menu li a {
     text-decoration: none;
     color: black;
-    background-color:azure;
     font-size: 32px;
     font-weight: bold;
-    padding: 16px, 32px;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     border-radius:16px;
 }
 
-.menu a:hover {
-    background-color:crimson;
+.menu li:hover {
+    background-color:aquamarine;
     color: azure;
+}
+
+.menu a:hover {
     cursor:default;
 }
 

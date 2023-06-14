@@ -1,15 +1,18 @@
-<!DOCTYPE html>
+<!DOCTYPE html lang="en">
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="../css/home.css"></link>
     <title>Store Name | Home</title>
 </head>
 <body>
-    <div class="menu-container"> <nav class="menu">
-            <li class="nav-item"><a href="bar.html">Bar</a></li>
-            <li class="nav-item"><a href="home.html">Home</a></li>
-            <li class="nav-item"><a href="cart.html">Cart</a></li>
-    </nav> </div>
+    <div class="container"> 
+        <div>
+                <nav class="menu">
+                    <div><li class="nav-item"><a href="bar.html">Bar</a></li></div>
+                    <div><li class="nav-item"><a href="home.html">Home</a></li></div>
+                    <div><li class="nav-item"><a href="cart.html">Cart</a></li></div>
+        </div>  
+    </div>
     <script>
         const menuItems = document.querySelectorAll("nav li");
         menuItems.forEach(item => {
@@ -24,16 +27,18 @@
     </script>
 
     <h1 class="c">
-        No quotation marks needed!
+        Store front 60% sale
     </h1>
-    <button class="toBarButtonClass" id="toBar">Go to Bar</button>
-    <script>
+    <div class="c">
+        <button class="toBarButtonClass" id="toBar">Go to Bar</button>
+    </div><script>
         const toBarButton = document.getElementById("toBar");
         toBarButton.addEventListener("click", function() {
             toBarButton.textContent = "You have moved away";
-            window.open("bar.html");
+            window.location.href="bar.html";
         });
 
     </script>
 </body>
 </html>
+

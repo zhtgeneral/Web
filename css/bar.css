@@ -1,3 +1,55 @@
 .c {
     text-align:center;
 }
+
+body {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.toBarButtonClass {
+    background-color:crimson;
+    color:azure; /* text color */
+    border: none; /* removes ugly border*/
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none; /*remove underline*/
+    display: inline-block;
+    font-size: 24px;
+    cursor:default;/*adds cursor pointer*/
+    border-radius: 24px;
+    font-weight: bold;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.toBarButtonClass:hover {
+    background-color:aliceblue;
+    color:crimson;
+}
+
+.user/pass {
+    display:block;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.user/pass li {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color:black;
+    text-decoration: none;
+}
+
+.loginDiv {
+    display:flex;
+    justify-content: center;
+}
+
+.loginUIClass{
+    text-align:center;
+    padding:64px;
+    background-color:aliceblue;
+    width:50%;
+    text-decoration: none;
+}
+
+.middle {
+    display:flex;
+    justify-content: center;
+    padding:32px;
+}
