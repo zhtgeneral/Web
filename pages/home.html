@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="../css/style.css"></link>
+    <title>Store Name | Home</title>
+</head>
+<body>
+    <div class="menu-container"> <nav class="menu">
+            <li class="nav-item"><a href="bar.html">Bar</a></li>
+            <li class="nav-item"><a href="home.html">Home</a></li>
+            <li class="nav-item"><a href="cart.html">Cart</a></li>
+    </nav> </div>
+    <script>
+        const menuItems = document.querySelectorAll("nav li");
+        menuItems.forEach(item => {
+            item.addEventListener("click", () => {
+                // remove active class from each menu items
+                menuItems.forEach(item => item.classList.remove("active"));
+
+                // add active class to the clicked menu item
+                item.classList.add("active");
+            });
+        });
+    </script>
+
+    <h1 class="c">
+        No quotation marks needed!
+    </h1>
+    <p class="container">text</p>
+    <button id="toBar">Go to Bar</button>
+    <script>
+        const toBarButton = document.getElementById("toBar");
+        toBarButton.addEventListener("click", function() {
+            toBarButton.textContent = "You have moved away";
+            window.open("bar.html");
+        });
+
+    </script>
+</body>
+</html>
