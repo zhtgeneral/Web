@@ -1,0 +1,24 @@
+.c {
+    text-align:center; /* class="c" will be used to quickly center text*/
+}
+h1 {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.returnShoppingButtonClass {
+    background-color:crimson;
+    color:azure; /* text color */
+    border: none; /* removes ugly border*/
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none; /*remove underline*/
+    display: inline-block;
+    font-size: 24px;
+    cursor:default;/*adds cursor pointer*/
+    border-radius: 24px;
+    font-weight: bold;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.returnShoppingButtonClass:hover {
+    background-color:aliceblue;
+    color:crimson;
+}
