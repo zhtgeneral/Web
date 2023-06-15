@@ -1,54 +1,132 @@
 .c {
     text-align: center; /*quick center*/
 }
+ul {
+    padding:0px;
+}
 h1 {
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-.container {
-    display:-webkit-flex;
-    justify-content: center;
-    background-color:aquamarine;
-    border-radius:16px;
-    padding:16px;
+html, body {
+    width:100%;
+    margin:0;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-
-.menu {
-    list-style-type:none;
-    display:-webkit-flex; /* display child items horizontally*/
+.page {
+    display:flex;
+    flex-direction: column;
+    position:fixed;
+    width:100%;
+    top:0;
+    left:0;
+    height:100vh;
+    overflow-y:auto;
 }
-
-.menu li {
-    margin-left:16px;
-    margin-right:16px;
+.nav {
+    display:flex;
+    flex-direction:column;
+    flex: 0 0 auto;
+}
+.navBelt {
     background-color:beige;
     padding-left:32px;
     padding-right:32px;
-    padding-top:16px;
-    padding-bottom:16px;
-    border-radius:16px;
+    position:flex;
+    top:0;
+    left:0;
 }
-.menu li a {
-    text-decoration: none;
-    color: black;
-    font-size: 32px;
+.navBeltCompanyName {
+    align-items:left;
+}
+.navMainContents {
+    list-style-type:none;
+    display:-webkit-flex; /* display child items horizontally*/
+    justify-content: center;
+    background-color:black;
+    padding-top:8px;
+    padding-bottom:8px;
+    padding-left: 32px;
+    padding-right:32px;
+}
+.navMainContentsButton {
+    padding-left:16px;
+    padding-right:16px;
+}
+.navBarButton {
+    background-color:black;
+    color:azure; /* text color */
+    border: 0px; /* removes ugly border*/
+    border-color:black;
+    padding-top: 8px;
+    padding-bottom:8px;
+    padding-left:32px;
+    padding-right:32px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 32px;
     font-weight: bold;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    border-radius:16px;
 }
-
-.menu li:hover {
-    background-color:aquamarine;
-    color: azure;
+.navBarButton:hover {
+    background-color:azure;
+    color:black;
 }
-
-.menu a:hover {
-    cursor:default;
+.navHomeButton {
+    background-color:black;
+    color:azure; /* text color */
+    border: 0px; /* removes ugly border*/
+    border-color:black;
+    padding-top: 8px;
+    padding-bottom:8px;
+    padding-left:32px;
+    padding-right:32px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 32px;
+    font-weight: bold;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-
-.toBarButtonClass {
+.navHomeButton:hover {
+    background-color:azure;
+    color:black;
+}
+.navCartButton {
+    background-color:black;
+    color:azure; /* text color */
+    border: 0px; /* removes ugly border*/
+    border-color:black;
+    padding-top: 8px;
+    padding-bottom:8px;
+    padding-left:32px;
+    padding-right:32px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 32px;
+    font-weight: bold;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.navCartButton:hover {
+    background-color:azure;
+    color:black;
+}
+.main {
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    background-color: azure;
+}
+.mainRow1 {
+    background-color:crimson;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    padding:32px;
+}
+.toBarButton {
     background-color:chartreuse;
     color:azure; /* text color */
-    border: none; /* removes ugly border*/
+    border: 8px; /* removes ugly border*/
+    border-color:black;
     padding: 16px 32px;
     text-align: center;
     text-decoration: none; /*remove underline*/
@@ -59,7 +137,28 @@ h1 {
     font-weight: bold;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-.toBarButtonClass:hover {
+.toBarButton:hover {
     background-color:aliceblue;
     color:chartreuse;
+}
+
+.footer {
+    background-color:black;
+    color:azure;
+    padding:32px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-bottom:256px
+}
+.footerCol1 {
+    float:left;
+    clear:none;
+    padding:16px;
+    text-align: left;
+    width:20%;
+}
+
+.footer li {
+    list-style-type: none;
+    text-align: left;
 }

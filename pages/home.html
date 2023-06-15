@@ -5,40 +5,119 @@
     <title>Store Name | Home</title>
 </head>
 <body>
-    <div class="container"> 
-        <div>
-                <nav class="menu">
-                    <div><li class="nav-item"><a href="bar.html">Bar</a></li></div>
-                    <div><li class="nav-item"><a href="home.html">Home</a></li></div>
-                    <div><li class="nav-item"><a href="cart.html">Cart</a></li></div>
-        </div>  
+    <div class="page">
+        <div class="nav" id="nav">
+            <div class="navBelt">
+                <div class="navBeltCompanyName">
+                    <h1>Company name</h1>
+                </div>  
+            </div>
+            <div class="navMain"> 
+                <div class="navMainContents">
+                    <div class="navMainContentsButton">
+                        <button class="navBarButton" id="navToBar">Go to Bar</button>
+                    </div>
+                    <div class="navMainContentsButton">
+                        <button class="navHomeButton" id="navToHome">Home</button>
+                    </div>
+                    <div class="navMainContentsButton">
+                        <button class="navCartButton" id="navToCart">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <script>
+                const NavBarButton = document.getElementById("navToBar");
+                NavBarButton.addEventListener("click", function() {
+                    window.location.href="bar.html";
+                });
+                const NavHomeButton = document.getElementById("navToHome");
+                NavHomeButton.addEventListener("click", function() {
+                    window.location.href="home.html";
+                });
+                const NavCartButton = document.getElementById("navToCart");
+                NavCartButton.addEventListener("click", function() {
+                    window.location.href="cart.html";
+                });
+            </script>
+        </div>
+
+        <div class="main">
+            <div class="mainRow1" id="mainRow1">
+                <h1 class="c">Store front 60% sale</h1>
+                <div class="c">
+                    <button class="toBarButton" id="toBar">Go to Bar</button>
+                </div>
+                <script>
+                    const toBarButton = document.getElementById("toBar");
+                    toBarButton.addEventListener("click", function() {
+                        window.location.href="bar.html";
+                    });
+                </script>
+            </div>
+            <script>
+                window.addEventListner("load", function() {
+                    const nav = document.getElementById("nav");
+                    const navHeight = nav.offsetHeight;
+                    const windowHeight = window.innerHeight;
+                    const mainRow1 = document.getElementById("mainRow1");
+                    mainRow1.style.height = "${windowHeight - navHeight}px";
+                });
+                window.addEventListner("resize", function() {
+                    const nav = document.getElementById("nav");
+                    const navHeight = nav.offsetHeight;
+                    const windowHeight = window.innerHeight;
+                    const mainRow1 = document.getElementById("mainRow1");
+                    mainRow1.style.height = "${windowHeight - navHeight}px";
+                });
+            </script>
+        </div>
+        <div class="footer">
+            <div class="footerCol">
+                <div class="footerColContent">
+                    <h3>Title1</h3>
+                    <ul>
+                        <li>Long Item1</li>
+                        <li>Item2</li>
+                        <li>Item3</li>
+                        <li>Item4</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footerCol">
+                <div class="footerColContent">
+                    <h3>Title2</h3>
+                    <ul>
+                        <li>Item1</li>
+                        <li>Item2</li>
+                        <li>Item3</li>
+                        <li>Item4</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footerCol">
+                <div class="footerColContent">
+                    <h3>Long Title3</h3>
+                    <ul>
+                        <li>Item1</li>
+                        <li>Item2</li>
+                        <li>Item3</li>
+                        <li>Item4</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footerCol">
+                <div class="footerColContent">
+                    <h3>Title4</h3>
+                    <ul>
+                        <li>Item1</li>
+                        <li>Item2</li>
+                        <li>Item3</li>
+                        <li>Item4</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
-    <script>
-        const menuItems = document.querySelectorAll("nav li");
-        menuItems.forEach(item => {
-            item.addEventListener("click", () => {
-                // remove active class from each menu items
-                menuItems.forEach(item => item.classList.remove("active"));
-
-                // add active class to the clicked menu item
-                item.classList.add("active");
-            });
-        });
-    </script>
-
-    <h1 class="c">
-        Store front 60% sale
-    </h1>
-    <div class="c">
-        <button class="toBarButtonClass" id="toBar">Go to Bar</button>
-    </div><script>
-        const toBarButton = document.getElementById("toBar");
-        toBarButton.addEventListener("click", function() {
-            toBarButton.textContent = "You have moved away";
-            window.location.href="bar.html";
-        });
-
-    </script>
 </body>
 </html>
 
